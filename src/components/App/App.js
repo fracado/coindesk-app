@@ -45,8 +45,8 @@ class App extends Component {
       'https://api.coindesk.com/v1/bpi/historical/close.json?start=' +
         startdate +
         '&end=' +
-        enddate,
-      // 'https://api.coindesk.com/v1/bpi/currentprice/EUR.json',
+        enddate +
+        '&currency=EUR',
       {
         method: 'get',
         dataType: 'json'
