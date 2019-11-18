@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Table from '../CoindeskApp/Table';
+import InfoBox from '../CoindeskApp/InfoBox';
 
 class App extends Component {
   constructor(props) {
@@ -70,6 +71,7 @@ class App extends Component {
         <header className='App-header'>
           {/* load Table component if data is not null */}
           {this.state.data !== null && <Table rates={this.state.data.bpi} />}
+          <InfoBox />
         </header>
       </div>
     );
