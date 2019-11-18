@@ -2,21 +2,25 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #EEFEEF;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.App-link {
-  color: #09d3ac;
+#left {
+  margin-right: 2vw;
+  margin-left: 20vw;
+  padding-right: 40px;
+}
+
+table {
+  max-width: 400px;
+  margin: 50px;
+  background-color: #D6E5D6;
+  color: darkgoldenrod !important;
 }

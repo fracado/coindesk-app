@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Table from '../CoindeskApp/Table';
+import TableBox from '../CoindeskApp/TableBox';
 import InfoBox from '../CoindeskApp/InfoBox';
 
 class App extends Component {
@@ -70,7 +70,7 @@ class App extends Component {
       <div className='App'>
         <header className='App-header'>
           {/* load Table component if data is not null */}
-          {this.state.data !== null && <Table rates={this.state.data.bpi} />}
+          {this.state.data !== null && <TableBox rates={this.state.data.bpi} />}
           <InfoBox />
         </header>
       </div>

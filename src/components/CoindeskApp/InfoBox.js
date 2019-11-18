@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './InfoBox.css';
 
 export default class InfoBox extends Component {
   constructor(props) {
@@ -19,6 +20,12 @@ export default class InfoBox extends Component {
       .then(response => response.json())
       .then(result => {
         console.log(result);
+        let animationBox = document.getElementById('animationBox')
+        if (animationBox) {
+          animationBox.classList.add('animated');
+          animationBox.classList.add('flash');
+          setTimeout(() => animationBox.classList.remove('flash'), 2500); 
+        }
         this.setState({
           currentPrice: result.bpi.EUR.rate_float
         });
@@ -40,9 +47,14 @@ export default class InfoBox extends Component {
 
   render() {
     return (
-      <div className='currentPrice-container'>
-        {this.state.currentPrice ? (
-          <div className='infobox'>{this.state.currentPrice}</div>
+      <div id='right' className='currentPrice-container'>
+          {this.state.currentPrice ? (    
+          <div id='infobox'>
+            <p>Current Rate:</p>
+            <div id="animationBox">
+              {this.state.currentPrice}
+            </div>
+          </div>
         ) : null}
       </div>
     );
