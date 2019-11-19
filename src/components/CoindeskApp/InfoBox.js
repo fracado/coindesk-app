@@ -49,7 +49,7 @@ export default class InfoBox extends Component {
     return (
       <div id='right' className='currentPrice-container'>
           {this.state.currentPrice ? (    
-          <div id='infobox'>
+          <div className='infobox'>
             <p>Current Rate:</p>
             <div id="animationBox">
               {this.state.currentPrice}

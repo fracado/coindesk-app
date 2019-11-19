@@ -2,6 +2,7 @@ import React from 'react';
 import TableRow from './TableRow';
 import '../App/App.css';
 
+
 export default class TableBox extends React.Component {
   render() {
     let obj = this.props.rates;

@@ -5,7 +5,7 @@ export default class TableRow extends Component {
     return (
       <tr>
         <td>{this.props.keyname}</td>
-        <td>{this.props.value}</td>
+        <td>{this.props.value} €</td>
       </tr>
     );
   }
