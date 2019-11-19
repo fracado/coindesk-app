@@ -7,6 +7,7 @@ Here's a link to the deployed web app: https://coindesk-app.netlify.com/
 - ReactJS
 - Coindesk API
 - Bootstrap
+- Material Design for Bootstrap
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
