@@ -6,16 +6,14 @@ import '../App/App.css';
 export default class TableBox extends React.Component {
   render() {
     let obj = this.props.rates;
-    let array = [];
+    let dataSet = [];
 
     for (let key in obj) {
-      array.push({ key, value: obj[key] });
+      dataSet.push({ key, value: obj[key] });
     }
-    console.log(array);
 
     return (
       <div id='left'>
-        {/* <table  className='table-container'> */}
         <table className='table table-striped'>
           <thead className='thead-dark'>
             <tr>
@@ -24,7 +22,7 @@ export default class TableBox extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {array.map((item, i) => (
+            {dataSet.map((item, i) => (
               <TableRow key={i} keyname={item.key} value={item.value} />
             ))}
           </tbody>

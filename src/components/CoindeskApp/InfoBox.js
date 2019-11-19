@@ -5,8 +5,6 @@ export default class InfoBox extends Component {
   constructor(props) {
     super(props);
 
-    this.getCurrentPrice = this.getCurrentPrice.bind(this);
-
     this.state = {
       currentPrice: null
     };
@@ -19,11 +17,12 @@ export default class InfoBox extends Component {
     })
       .then(response => response.json())
       .then(result => {
-        console.log(result);
+        // add flash animation to current rate when data is fetched
         let animationBox = document.getElementById('animationBox')
         if (animationBox) {
           animationBox.classList.add('animated');
           animationBox.classList.add('flash');
+          // remove flash so that it can be added/triggered again
           setTimeout(() => animationBox.classList.remove('flash'), 2500); 
         }
         this.setState({
@@ -33,12 +32,11 @@ export default class InfoBox extends Component {
       .catch(err => {
         console.log(err);
       });
-    console.log(this.state.currentPrice);
   }
 
   componentDidMount() {
     this.getCurrentPrice();
-    this.refresh = setInterval(() => this.getCurrentPrice(), 10000);
+    this.refresh = setInterval(() => this.getCurrentPrice(), 10000); // update current rate
   }
 
   componentWillUnmount() {
@@ -48,13 +46,13 @@ export default class InfoBox extends Component {
   render() {
     return (
       <div id='right' className='currentPrice-container'>
-          {this.state.currentPrice ? (    
-          <div className='infobox'>
-            <p>Current Rate:</p>
-            <div id="animationBox">
-              {this.state.currentPrice}
-            </div>
+        {this.state.currentPrice ? (    
+        <div className='infobox'>
+          <p>Current Rate:</p>
+          <div id="animationBox">
+            {this.state.currentPrice} €
           </div>
+        </div>
         ) : null}
       </div>
     );

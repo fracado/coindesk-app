@@ -1,5 +1,4 @@
 #currentPrice-container {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -7,7 +6,6 @@
 #right {
   margin-left: 2vw;
   margin-right: 20vw;
-  padding-left: 40px;
 }
 
 .infobox {
@@ -17,7 +15,7 @@
   background-color: honeydew;
   font-size: 20px;
   padding: 10px;
-  margin-top: 120px;
+  margin-top: 48px;
 }
 
 .infobox > p {
